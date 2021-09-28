@@ -1,27 +1,43 @@
-# OnesignalAngular
+# Angular OneSignal NPM Sample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+This project demonstrates the usage of OneSignal NPM package to add push notification to your Angular project.
 
-## Development server
+## OneSignal NPM Package
+NPM Packge: [OneSignal-Ngx](https://www.npmjs.com/package/onesignal-ngx)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Install OneSignal NPM Package
+```javascript
+npm i onesignal-ngx
+```
+## Use OneSignal NPM Package
+```javascript
+import { OneSignalService } from 'onesignal-ngx';
+```
+Initialize OneSignal with your appId via the options parameter:
 
-## Code scaffolding
+```javascript
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'angular-example-app';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  constructor(private oneSignal: OneSignalService) {
+    this.oneSignal.init({
+      appId: "8e7fe838-fbcd-4152-980d-32565a2dcf03",
+    });
+  }
+}
+```
+## Add Tags To Segment Users
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```javascript
+  onHandleTag(tag: any) {
+    console.log('Tagging');
+    this.os.sendTag("tech", tag).then(() => {
+      console.log("Sent tag: " + tag);
+    });
+  }
+```
