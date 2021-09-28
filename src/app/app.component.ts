@@ -9,9 +9,16 @@ import { OneSignalService } from 'onesignal-ngx';
 export class AppComponent {
   title = 'onesignal-angular';
 
-  constructor(private oneSignal: OneSignalService) {
-    this.oneSignal.init({
-      appId: "8e7fe838-fbcd-4152-980d-32565a2dcf03",
+  constructor(private os: OneSignalService) {
+    this.os.init({
+      appId: "30a2434b-90b8-47bf-952e-cab24efef79b",
+    });
+  }
+
+  onHandleTag(tag: any) {
+    console.log('Tagging');
+    this.os.sendTag("tech", tag).then(() => {
+      console.log("Sent tag: " + tag);
     });
   }
 }

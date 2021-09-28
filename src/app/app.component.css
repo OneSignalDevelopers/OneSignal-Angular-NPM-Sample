@@ -1,0 +1,31 @@
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+  }
+  
+  .btn--react {
+    background-color: #00d8ff;
+  }
+  
+  .btn--angular {
+    background-color: #b52e31;
+  }
+  
+  .btn--vue {
+    background-color: #42b883;
+  }
