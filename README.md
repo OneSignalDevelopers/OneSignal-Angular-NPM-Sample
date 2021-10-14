@@ -36,7 +36,7 @@ export class AppComponent {
 ## Add Tags To Segment Users
 
 ```javascript
-    this.os.sendTag("tech", tag).then(() => {
-      console.log("Sent tag: " + tag);
-    });
+this.os.sendTag("tech", tag).then(() => {
+  console.log("Sent tag: " + tag);
+});
 ```
