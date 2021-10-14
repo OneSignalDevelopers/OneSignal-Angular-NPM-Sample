@@ -13,6 +13,8 @@ npm i onesignal-ngx
 ```javascript
 import { OneSignalService } from 'onesignal-ngx';
 ```
+
+## Use the OneSignal NPM Package
 Initialize OneSignal with your OneSignal AppId:
 
 ```javascript
