@@ -1,4 +1,4 @@
-# Angular OneSignal NPM Sample
+# Push Notifications In Angular With OneSignal
 
 This project demonstrates the usage of OneSignal NPM package to add push notification to your Angular project.
 
