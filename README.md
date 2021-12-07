@@ -2,6 +2,9 @@
 
 This project demonstrates the usage of OneSignal NPM package to add push notification to your Angular project.
 
+## How-to guide
+Read our [official how-to guide](https://onesignal.com/blog/how-to-integrate-push-notifications-in-angular/) to demonstrate the usage of push notification using the OneSignal npm package and Angular.
+
 ## Create a FREE OneSignal Account
 Sign up for a free [OneSignal](https://onesignal.com/) account
 
@@ -31,7 +34,7 @@ export class AppComponent {
 
   constructor(private oneSignal: OneSignalService) {
     this.oneSignal.init({
-      appId: "8e7fe838-fbcd-4152-980d-32565a2dcf03",
+      appId: "YOUR-ONESIGNAL-APP-ID-HERE",
     });
   }
 }
