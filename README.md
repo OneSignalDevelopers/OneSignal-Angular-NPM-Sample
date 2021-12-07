@@ -2,6 +2,9 @@
 
 This project demonstrates the usage of OneSignal NPM package to add push notification to your Angular project.
 
+## Create a FREE OneSignal Account
+Sign up for a free [OneSignal](https://onesignal.com/) account
+
 ## OneSignal NPM Package
 NPM Packge: [OneSignal-Ngx](https://www.npmjs.com/package/onesignal-ngx)
 
@@ -34,6 +37,7 @@ export class AppComponent {
 }
 ```
 ## Add Tags To Segment Users
+If you want to learn more about OneSignal data tags to segment your users, visti our [official docs](https://documentation.onesignal.com/docs/add-user-data-tags).
 
 ```javascript
 this.os.sendTag("tech", tag).then(() => {
